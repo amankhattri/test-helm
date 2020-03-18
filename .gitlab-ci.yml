@@ -1,0 +1,18 @@
+stages:
+  - build
+
+
+lint Helm Charts:
+  image:
+    name: linkyard/docker-helm
+    entrypoint: ["/bin/sh", "-c"]
+  stage: build
+  script:
+    - echo "hello test 123"
+    - ls
+    - helm lint  zabbix-*/
+
+    
+
+
+
